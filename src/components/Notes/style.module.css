@@ -1,0 +1,25 @@
+.note {
+  background-color: #ffeb3b;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #000000b3;
+  padding: 16px;
+  margin: 16px;
+  width: 200px;
+  word-wrap: break-word;
+
+  > h1 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 8px;
+  }
+  > p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 12px;
+  }
+  > button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+  }
+}
