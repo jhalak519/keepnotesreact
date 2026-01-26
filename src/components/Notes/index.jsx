@@ -7,7 +7,7 @@ function Note(props) {
     return (
         <div className={styles.note}>
             <h1>{props.title}</h1>
-            <p>{props.content}</p>
+            <p className={styles.content}>{props.content}</p>
             <button onClick={handleClick}>Delete</button>
         </div>
     )

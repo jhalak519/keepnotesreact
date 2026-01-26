@@ -1,5 +1,5 @@
 .note {
-  background-color: #ffeb3b;
+  background-color: #61ca64;
   border-radius: 8px;
   box-shadow: 0 2px 4px #000000b3;
   padding: 16px;
@@ -8,7 +8,7 @@
   word-wrap: break-word;
 
   > h1 {
-    color: #333;
+    color: antiquewhite;
     font-size: 1.5em;
     margin-bottom: 8px;
   }
@@ -18,8 +18,28 @@
     margin-bottom: 12px;
   }
   > button {
-    background-color: #f44336;
-    color: white;
+    background-color: antiquewhite;
+    color: black;
     border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    &:hover {
+      color: #1f7e23;
+    }
+
   }
+}
+.content {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    white-space: normal;
 }
