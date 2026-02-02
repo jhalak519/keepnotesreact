@@ -3,43 +3,72 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px #000000b3;
   padding: 16px;
-  margin: 16px;
-  width: 200px;
+  /* margin: 16px; Removed margin in favor of grid gap */
+  /* width: 200px; Let grid control width */
+  min-height: 100px;
+  /* ensuring some height */
   word-wrap: break-word;
+  position: relative;
+  /* Needed for absolute positioning of children */
 
-  > h1 {
+  >h1 {
     color: antiquewhite;
     font-size: 1.5em;
     margin-bottom: 8px;
+    padding-right: 60px;
+    /* Add padding so text doesn't overlap buttons */
   }
-  > p {
+
+  >p {
     color: #555;
     font-size: 1em;
     margin-bottom: 12px;
-  }
-  > button {
-    background-color: antiquewhite;
-    color: black;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;  
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-    &:hover {
-      color: #1f7e23;
-    }
-
   }
 }
+
+.buttonGroup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.buttonGroup button {
+  background-color: antiquewhite;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  /* Sizable touch target but compact */
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 0.8em;
+  /* Slightly smaller for compactness */
+}
+
+.buttonGroup button:hover {
+  color: #1f7e23;
+}
+
 .content {
-    color: #555;
-    font-size: 1em;
-    margin-bottom: 12px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1; /* number of lines to show */
-    -webkit-box-orient: vertical;
-    word-wrap: break-word;
-    white-space: normal;
+  color: #555;
+  font-size: 1em;
+  margin-bottom: 12px;
+  /* Remove line clamp to handle truncation manually or keep it if we want hybrid */
+  /* -webkit-line-clamp: 3; */
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.readMore {
+  color: darkgreen;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.readMore:hover {
+  color: antiquewhite;
 }
